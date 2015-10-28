@@ -19,7 +19,7 @@ Add the repository to your project composer.json file:
 
 ```json
 "repositories": [
-    { }"type": "vcs", "url": "http://github.com/studioforty9/pubble" }
+    { "type": "vcs", "url": "http://github.com/studioforty9/pubble" }
 ],
 ```
 
