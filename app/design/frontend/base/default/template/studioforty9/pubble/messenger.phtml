@@ -1,0 +1,22 @@
+<?php
+/**
+ * Studioforty9_Pubble
+ *
+ * @category  Studioforty9
+ * @package   Studioforty9_Pubble
+ * @author    StudioForty9 <info@studioforty9.com>
+ * @copyright 2015 StudioForty9 (http://www.studioforty9.com)
+ * @version   1.0.0
+ */
+?>
+<?php
+/**
+ * @see Studioforty9_Pubble_Block_Messenger $this
+ */
+?>
+<?php if ($this->isCopyPaste()): ?>
+<?php echo $this->renderCode(); ?>
+<?php else: ?>
+<?php echo $this->renderJsUrl(); ?>
+<?php echo $this->renderJsScript(); ?>
+<?php endif; ?>

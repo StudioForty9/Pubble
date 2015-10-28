@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Studioforty9_Pubble
+ *
+ * @category  Studioforty9
+ * @package   Studioforty9_Pubble
+ * @author    StudioForty9 <info@studioforty9.com>
+ * @copyright 2015 StudioForty9 (http://www.studioforty9.com)
+ * @license   https://github.com/studioforty9/twilio/blob/master/LICENCE BSD
+ * @version   1.0.0
+ * @link      https://github.com/studioforty9/twilio
+ */
+-->
+<config>
+    <modules>
+        <Studioforty9_Pubble>
+            <version>1.0.0</version>
+        </Studioforty9_Pubble>
+    </modules>
+    <global>
+        <blocks>
+            <studioforty9_pubble>
+                <class>Studioforty9_Pubble_Block</class>
+            </studioforty9_pubble>
+        </blocks>
+        <helpers>
+            <studioforty9_pubble>
+                <class>Studioforty9_Pubble_Helper</class>
+            </studioforty9_pubble>
+        </helpers>
+        <models>
+            <studioforty9_pubble>
+                <class>Studioforty9_Pubble_Model</class>
+            </studioforty9_pubble>
+        </models>
+    </global>
+    <frontend>
+        <events>
+            <controller_action_layout_generate_blocks_after>
+                <observers>
+                    <studioforty9_pubble>
+                        <type>singleton</type>
+                        <class>Studioforty9_Pubble_Model_Observer</class>
+                        <method>addPubbleToFooter</method>
+                    </studioforty9_pubble>
+                </observers>
+            </controller_action_layout_generate_blocks_after>
+        </events>
+    </frontend>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <studioforty9_pubble translate="title" module="studioforty9_pubble">
+                                            <title>Pubble Settings</title>
+                                        </studioforty9_pubble>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <phpunit>
+        <suite>
+            <modules>
+                <Studioforty9_Pubble/>
+            </modules>
+        </suite>
+    </phpunit>
+</config>
