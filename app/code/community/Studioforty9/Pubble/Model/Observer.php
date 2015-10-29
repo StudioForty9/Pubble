@@ -42,7 +42,7 @@ class Studioforty9_Pubble_Model_Observer
                     'after'    => '-'
                 )
             );
-            $layout->getBlock('footer')->append($pubble);
+            $layout->getBlock('before_body_end')->append($pubble);
         } catch (Exception $e) {
             Mage::logException($e);
         }
